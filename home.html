@@ -10,14 +10,7 @@
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
-
-  <!-- ANIMATED BACKGROUND ORBS -->
-  <div class="orb orb-1" style="top:10%;left:5%"></div>
-  <div class="orb orb-2" style="top:60%;left:80%"></div>
-  <div class="orb orb-3" style="top:30%;left:50%"></div>
-  <div class="orb orb-4" style="top:80%;left:20%"></div>
-
-  <!-- GRADIENT MESH OVERLAY -->
+ <!-- GRADIENT MESH OVERLAY -->
   <div class="gradient-mesh"></div>
 
   <!-- PARTICLES CANVAS -->
@@ -92,15 +85,15 @@
   <section class="px-6 py-10">
     <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
       <div class="stat-card p-6 rounded-2xl text-center animate-on-scroll" data-animate="fadeInUp" data-delay="1">
-        <div class="text-3xl font-extrabold gradient-text mb-1"><span class="counter" data-target="2500" data-suffix="K+">0</span></div>
+        <div class="text-3xl font-extrabold gradient-text mb-1"><span class="counter" data-target="115" data-suffix="+">0</span></div>
         <div class="text-sm text-gray-400">Member Aktif</div>
       </div>
       <div class="stat-card p-6 rounded-2xl text-center animate-on-scroll" data-animate="fadeInUp" data-delay="2">
-        <div class="text-3xl font-extrabold gradient-text mb-1"><span class="counter" data-target="120" data-suffix="+">0</span></div>
+        <div class="text-3xl font-extrabold gradient-text mb-1"><span class="counter" data-target="12" data-suffix="+">0</span></div>
         <div class="text-sm text-gray-400">Kursus Tersedia</div>
       </div>
       <div class="stat-card p-6 rounded-2xl text-center animate-on-scroll" data-animate="fadeInUp" data-delay="3">
-        <div class="text-3xl font-extrabold gradient-text mb-1"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+        <div class="text-3xl font-extrabold gradient-text mb-1"><span class="counter" data-target="3" data-suffix="+">0</span></div>
         <div class="text-sm text-gray-400">Mentor Expert</div>
       </div>
       <div class="stat-card p-6 rounded-2xl text-center animate-on-scroll" data-animate="fadeInUp" data-delay="4">
@@ -228,7 +221,7 @@
   <!-- FOOTER -->
   <footer class="text-center py-8 text-gray-500 text-sm border-t border-white/10 animate-on-scroll" data-animate="fadeInUp">
     <div class="mb-2 text-xl font-extrabold gradient-text">MEX ACADEMY</div>
-    <p>&copy; 2025 MEX ACADEMY. Pemilik Situs MEX ACADEMY. All rights reserved.</p>
+    <p>&copy; MEX ACADEMY. All rights reserved.</p>
   </footer>
 
   <!-- TradingView Widget Script -->
@@ -237,10 +230,14 @@
     document.addEventListener('DOMContentLoaded', function () {
       if (typeof TradingView !== 'undefined') {
         new TradingView.widget({
-          autosize: true, symbol: "NASDAQ:AAPL", interval: "D", timezone: "Etc/UTC",
+          autosize: true, symbol: "PEPPERSTONE:XAUUSD", interval: "D", timezone: "Etc/UTC",
           theme: "dark", style: "1", locale: "en", toolbar_bg: "#1C1C1E",
           enable_publishing: false, hide_side_toolbar: false, allow_symbol_change: true,
-          container_id: "tradingview_chart", studies: ["RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+          container_id: "tradingview_chart",
+          studies: [
+            { id: "MAExp@tv-basicstudies", inputs: { length: 50 }, overrides: { "plot.color": "#0000FF", "plot.linewidth": 2 } },
+            { id: "MAExp@tv-basicstudies", inputs: { length: 200 }, overrides: { "plot.color": "#FF0000", "plot.linewidth": 2 } }
+          ],
           withdateranges: true, details: true, hotlist: true, calendar: true
         });
       }

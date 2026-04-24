@@ -153,7 +153,7 @@ body::before {
   border-radius: 9999px;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #007AFF;
+  color: #00ff556d;
   text-decoration: none;
   background: transparent;
   border: 2px solid #007AFF;
@@ -195,7 +195,7 @@ body::before {
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
-  background: linear-gradient(135deg, #007AFF, #5856D6);
+  background: linear-gradient(135deg, #007bff92, #5856D6);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -470,7 +470,7 @@ body::before {
 
 /* Section Title */
 .section-title {
-  background: linear-gradient(90deg, #007AFF, #5856D6);
+  background: linear-gradient(90deg, #007bff64, #5856d67e);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -481,7 +481,7 @@ body::before {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #007AFF, #5856D6);
+  background: linear-gradient(135deg, #007bff77, #5856d690);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,22 +493,22 @@ body::before {
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background: #007AFF;
+  background: #83a4c770;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(11, 200, 11, 0.7);
   }
 
   70% {
-    box-shadow: 0 0 0 10px rgba(0, 122, 255, 0);
+    box-shadow: 0 0 0 10px rgba(14, 76, 143, 0.434);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
+    box-shadow: 0 0 0 0 rgba(227, 255, 47, 0.338);
   }
 }
 
@@ -528,8 +528,8 @@ body::before {
 /* Button Secondary */
 .btn-secondary {
   background: rgba(0, 122, 255, 0.15);
-  border: 2px solid #007AFF;
-  color: #007AFF;
+  border: 2px solid #007bff98;
+  color: #007bff98;
   transition: all 0.3s ease;
 }
 
@@ -541,7 +541,7 @@ body::before {
 
 /* Button CTA */
 .btn-cta {
-  background: linear-gradient(135deg, #007AFF, #5856D6);
+  background: linear-gradient(135deg, #007bffb2, #5856D6);
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(88, 86, 214, 0.4);
@@ -566,12 +566,12 @@ body::before {
 
 /* Link Arrow */
 .link-arrow {
-  color: #007AFF;
+  color: #e9e9e9;
   transition: all 0.3s ease;
 }
 
 .link-arrow:hover {
-  color: #5856D6;
+  color: #000000;
   padding-left: 5px;
 }
 
@@ -988,7 +988,7 @@ body::before {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #007AFF, #5856D6, #007AFF, #0051D5);
+  background: linear-gradient(45deg, #007bff89, #5856d690, #00ff2282, #0051D5);
   background-size: 400% 400%;
   border-radius: 26px;
   z-index: -1;
@@ -1018,7 +1018,7 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #007AFF, #5856D6);
+  background: linear-gradient(180deg, #728191, #04040c);
   border-radius: 4px;
 }
 
@@ -1068,7 +1068,7 @@ html {
   left: 0;
   width: 0;
   height: 1px;
-  background: #5856D6;
+  background: #5956ea78;
   transition: width 0.3s ease;
 }
 
