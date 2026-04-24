@@ -1,4 +1,4 @@
-K # TODO: Percantik CSS Warna Abstrak
+ Percantik CSS Warna Abstrak
 
 - [x] Baca & pahami semua file (index.html, home.html, style.css, terminal.js)
 - [x] Buat plan warna abstrak Aurora Sunset
