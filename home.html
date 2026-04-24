@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MEX ACADEMY - Community</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="asset/css/style.css">
+  <script src="asset/js/terminal.js"></script>
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav class="nav-glass fixed top-0 w-full z-50 px-6 py-4 animate-fadeInDown">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-extrabold gradient-text animate-float">MEX ACADEMY</a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300 items-center">
+        <a href="#dashboard" class="hover:text-white transition hover:scale-105">Dashboard</a>
+        <button onclick="openTerminalModal()"
+          class="hover:text-white transition hover:scale-105 bg-transparent border-none cursor-pointer font-medium text-gray-300">Terminal</button>
+        <a href="#community" class="hover:text-white transition hover:scale-105">Community</a>
+        <a href="#events" class="hover:text-white transition hover:scale-105">Events</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30">
+          <div class="pulse-dot"></div>
+          <span class="text-xs text-green-400 font-medium">Online</span>
+        </div>
+        <div class="avatar">MA</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TERMINAL MODAL -->
+  <div id="terminalModal">
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-title">MEX Terminal &mdash; TradingView</span>
+        </div>
+        <button class="terminal-close" onclick="closeTerminalModal()">&#10005;</button>
+      </div>
+      <div class="terminal-body">
+        <div class="tradingview-widget-container" style="width:100%;height:100%;">
+          <div id="tradingview_chart"></div>
+        </div>
+      </div>
+      <div class="terminal-footer">
+        <span>Funda Mental Terminal &bull; Real-time market data powered by TradingView</span>
+        <span class="terminal-status">&#9679; Connected</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO WELCOME -->
+  <section class="pt-32 pb-16 px-6 text-center relative">
+    <div class="max-w-4xl mx-auto">
+      <div
+        class="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-400 mb-6 animate-fadeInUp opacity-0-start">
+        Selamat datang kembali, Member MEX ACADEMY
+      </div>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-fadeInUp opacity-0-start delay-1">
+        <span class="section-title">Komunitas MEX ACADEMY</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 animate-fadeInUp opacity-0-start delay-2">
+        Bangun koneksi, pelajari skill baru, dan tumbuh bersama komunitas trader & AI terbesar
+      </p>
+      <div class="flex justify-center gap-4 animate-fadeInUp opacity-0-start delay-3">
+        <a href="#courses" class="px-8 py-3 rounded-full font-semibold btn-primary inline-block">Mulai Belajar</a>
+        <a href="#community" class="px-8 py-3 rounded-full font-semibold btn-secondary inline-block">Gabung Diskusi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="px-6 py-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="stat-card p-6 rounded-2xl text-center animate-fadeInUp opacity-0-start delay-1">
+        <div class="text-3xl font-extrabold gradient-text mb-1">2.5K+</div>
+        <div class="text-sm text-gray-400">Member Aktif</div>
+      </div>
+      <div class="stat-card p-6 rounded-2xl text-center animate-fadeInUp opacity-0-start delay-2">
+        <div class="text-3xl font-extrabold gradient-text mb-1">120+</div>
+        <div class="text-sm text-gray-400">Kursus Tersedia</div>
+      </div>
+      <div class="stat-card p-6 rounded-2xl text-center animate-fadeInUp opacity-0-start delay-3">
+        <div class="text-3xl font-extrabold gradient-text mb-1">50+</div>
+        <div class="text-sm text-gray-400">Mentor Expert</div>
+      </div>
+      <div class="stat-card p-6 rounded-2xl text-center animate-fadeInUp opacity-0-start delay-4">
+        <div class="text-3xl font-extrabold gradient-text mb-1">98%</div>
+        <div class="text-sm text-gray-400">Tingkat Kepuasan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / MENU -->
+  <section id="dashboard" class="px-6 py-16">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 section-title animate-fadeInUp opacity-0-start">Fitur Komunitas
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass card p-8 rounded-2xl animate-fadeInUp opacity-0-start delay-1">
+          <div class="feature-icon">&#128640;</div>
+          <h3 class="text-xl font-bold mb-2">Live Trading</h3>
+          <p class="text-gray-400 text-sm mb-4">Sesi live trading bersama mentor expert setiap hari Senin-Jumat</p>
+          <a href="#" class="link-arrow text-sm font-medium">Lihat Jadwal &rarr;</a>
+        </div>
+        <div class="glass card p-8 rounded-2xl animate-fadeInUp opacity-0-start delay-2">
+          <div class="feature-icon">&#128218;</div>
+          <h3 class="text-xl font-bold mb-2">Kursus Online</h3>
+          <p class="text-gray-400 text-sm mb-4">Akses ratusan kursus trading, AI, dan digital skill</p>
+          <a href="#" class="link-arrow text-sm font-medium">Jelajahi Kursus &rarr;</a>
+        </div>
+        <div class="glass card p-8 rounded-2xl animate-fadeInUp opacity-0-start delay-3">
+          <div class="feature-icon">&#128172;</div>
+          <h3 class="text-xl font-bold mb-2">Forum Diskusi</h3>
+          <p class="text-gray-400 text-sm mb-4">Tanya jawab, sharing strategi, dan analisis market bersama</p>
+          <a href="#" class="link-arrow text-sm font-medium">Masuk Forum &rarr;</a>
+        </div>
+        <div class="glass card p-8 rounded-2xl animate-fadeInUp opacity-0-start delay-1">
+          <div class="feature-icon">&#127942;</div>
+          <h3 class="text-xl font-bold mb-2">Challenge & Reward</h3>
+          <p class="text-gray-400 text-sm mb-4">Ikuti challenge trading mingguan dan menangkan hadiah menarik</p>
+          <a href="#" class="link-arrow text-sm font-medium">Lihat Challenge &rarr;</a>
+        </div>
+        <div class="glass card p-8 rounded-2xl animate-fadeInUp opacity-0-start delay-2">
+          <div class="feature-icon">&#128200;</div>
+          <h3 class="text-xl font-bold mb-2">Signal & Analisis</h3>
+          <p class="text-gray-400 text-sm mb-4">Dapatkan signal harian dan analisis market dari tim expert</p>
+          <a href="#" class="link-arrow text-sm font-medium">Lihat Signal &rarr;</a>
+        </div>
+        <div class="glass card p-8 rounded-2xl animate-fadeInUp opacity-0-start delay-3">
+          <div class="feature-icon">&#127758;</div>
+          <h3 class="text-xl font-bold mb-2">Networking</h3>
+          <p class="text-gray-400 text-sm mb-4">Bertemu member dari seluruh dunia dan bangun koneksi bisnis</p>
+          <a href="#" class="link-arrow text-sm font-medium">Jelajahi Network &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT ACTIVITY -->
+  <section id="community" class="px-6 py-16">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 section-title animate-fadeInUp opacity-0-start">Aktivitas Terbaru
+      </h2>
+      <div class="space-y-4">
+        <div
+          class="glass activity-card p-6 rounded-2xl flex items-start gap-4 animate-fadeInLeft opacity-0-start delay-1">
+          <div class="avatar shrink-0">JD</div>
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold">John Doe <span class="text-gray-500 font-normal text-sm">membagikan analisis</span>
+              </h4>
+              <span class="text-xs text-gray-500">2 jam lalu</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-1">Analisis EUR/USD hari ini menunjukkan bullish trend pada timeframe H4.
+              Support kuat di 1.0850...</p>
+            <div class="flex gap-4 mt-3 text-xs text-gray-500">
+              <span class="hover:text-green-400 cursor-pointer transition">&#128077; 24 Suka</span>
+              <span class="hover:text-green-400 cursor-pointer transition">&#128172; 8 Komentar</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="glass activity-card p-6 rounded-2xl flex items-start gap-4 animate-fadeInRight opacity-0-start delay-2">
+          <div class="avatar shrink-0">AS</div>
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold">Alice Smith <span class="text-gray-500 font-normal text-sm">menyelesaikan
+                  kursus</span></h4>
+              <span class="text-xs text-gray-500">5 jam lalu</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-1">Baru saja menyelesaikan "Advanced AI Trading Strategy" &mdash;
+              kursusnya sangat recommended!</p>
+            <div class="flex gap-4 mt-3 text-xs text-gray-500">
+              <span class="hover:text-green-400 cursor-pointer transition">&#128077; 56 Suka</span>
+              <span class="hover:text-green-400 cursor-pointer transition">&#128172; 12 Komentar</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="glass activity-card p-6 rounded-2xl flex items-start gap-4 animate-fadeInLeft opacity-0-start delay-3">
+          <div class="avatar shrink-0">MK</div>
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold">Mentor Kevin <span class="text-gray-500 font-normal text-sm">mengadakan
+                  webinar</span></h4>
+              <span class="text-xs text-gray-500">Kemarin</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-1">Webinar "Market Outlook Q3 2025" akan dimulai besok pukul 19:00
+              WIB. Jangan lewatkan!</p>
+            <div class="flex gap-4 mt-3 text-xs text-gray-500">
+              <span class="hover:text-green-400 cursor-pointer transition">&#128077; 128 Suka</span>
+              <span class="hover:text-green-400 cursor-pointer transition">&#128172; 45 Komentar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-3xl mx-auto glass p-12 rounded-3xl animate-scaleIn opacity-0-start">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4 section-title">Siap Level Up Skill-mu?</h2>
+      <p class="text-gray-400 mb-8">Bergabung dengan ribuan member MEX ACADEMY dan mulai perjalanan trading & AI-mu hari
+        ini</p>
+      <a href="#" class="px-10 py-4 rounded-full text-lg font-semibold btn-cta inline-block">Upgrade Membership</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-8 text-gray-500 text-sm border-t border-white/10">
+    <div class="mb-2 text-xl font-extrabold gradient-text">MEX ACADEMY</div>
+    <p>&copy; 2025 MEX ACADEMY. Pemilik Situs MEX ACADEMY. All rights reserved.</p>
+  </footer>
+
+  <!-- TradingView Widget Script -->
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof TradingView !== 'undefined') {
+        new TradingView.widget({
+          autosize: true, symbol: "NASDAQ:AAPL", interval: "D", timezone: "Etc/UTC",
+          theme: "dark", style: "1", locale: "en", toolbar_bg: "#0b0e11",
+          enable_publishing: false, hide_side_toolbar: false, allow_symbol_change: true,
+          container_id: "tradingview_chart", studies: ["RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+          withdateranges: true, details: true, hotlist: true, calendar: true
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
