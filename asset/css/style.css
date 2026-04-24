@@ -19,8 +19,9 @@ body::before {
 /* GRADIENT TEXT        */
 /* ==================== */
 .gradient-text {
-  background: linear-gradient(90deg, #14F195, #9945FF);
+  background: linear-gradient(90deg, oklch(67.383% 0.04241 249.664), #5856D6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -31,7 +32,7 @@ body::before {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, #14F195, transparent);
+  background: radial-gradient(circle, #007AFF, transparent);
   filter: blur(60px);
   animation: float 6s infinite ease-in-out alternate;
 }
@@ -57,8 +58,8 @@ body::before {
 }
 
 .glass:hover {
-  border-color: rgba(153, 69, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(153, 69, 255, 0.15);
+  border-color: rgba(88, 86, 214, 0.3);
+  box-shadow: 0 10px 30px rgba(88, 86, 214, 0.15);
 }
 
 /* ==================== */
@@ -75,8 +76,6 @@ body::before {
 /* ==================== */
 /* ANIMATED BUTTONS     */
 /* ==================== */
-
-/* Primary Button - Animated Gradient */
 .btn-animated {
   position: relative;
   display: inline-block;
@@ -100,7 +99,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #14F195, #00c9a7, #9945FF, #14F195);
+  background: linear-gradient(45deg, #007AFF, #0051D5, #5856D6, #007AFF);
   background-size: 300% 300%;
   animation: gradientShift 4s ease infinite;
   z-index: -2;
@@ -114,7 +113,7 @@ body::before {
   left: 2px;
   right: 2px;
   bottom: 2px;
-  background: linear-gradient(45deg, #14F195, #00c9a7, #9945FF, #14F195);
+  background: linear-gradient(45deg, #007AFF, #0051D5, #5856D6, #007AFF);
   background-size: 300% 300%;
   animation: gradientShift 4s ease infinite;
   filter: blur(15px);
@@ -126,7 +125,7 @@ body::before {
 
 .btn-animated:hover {
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 0 30px rgba(153, 69, 255, 0.6), 0 0 60px rgba(20, 241, 149, 0.3);
+  box-shadow: 0 0 30px rgba(88, 86, 214, 0.6), 0 0 60px rgba(0, 122, 255, 0.3);
 }
 
 .btn-animated:hover::after {
@@ -147,7 +146,6 @@ body::before {
   }
 }
 
-/* Secondary Button - Outline Glow */
 .btn-outline-glow {
   position: relative;
   display: inline-block;
@@ -155,10 +153,10 @@ body::before {
   border-radius: 9999px;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #14F195;
+  color: #007AFF;
   text-decoration: none;
   background: transparent;
-  border: 2px solid #14F195;
+  border: 2px solid #007AFF;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -172,15 +170,15 @@ body::before {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(20, 241, 149, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 122, 255, 0.3), transparent);
   transition: left 0.5s ease;
   z-index: -1;
 }
 
 .btn-outline-glow:hover {
   color: white;
-  border-color: #9945FF;
-  box-shadow: 0 0 20px rgba(20, 241, 149, 0.4), inset 0 0 20px rgba(153, 69, 255, 0.2);
+  border-color: #5856D6;
+  box-shadow: 0 0 20px rgba(0, 122, 255, 0.4), inset 0 0 20px rgba(88, 86, 214, 0.2);
   transform: scale(1.05);
 }
 
@@ -188,7 +186,6 @@ body::before {
   left: 100%;
 }
 
-/* Neon Glow Button */
 .btn-neon {
   position: relative;
   display: inline-block;
@@ -198,32 +195,31 @@ body::before {
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
-  background: linear-gradient(135deg, #14F195, #9945FF);
+  background: linear-gradient(135deg, #007AFF, #5856D6);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(20, 241, 149, 0.5), 0 0 30px rgba(153, 69, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 122, 255, 0.5), 0 0 30px rgba(88, 86, 214, 0.3);
   animation: neonPulse 2s infinite;
 }
 
 .btn-neon:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(20, 241, 149, 0.8), 0 0 50px rgba(153, 69, 255, 0.5), 0 0 80px rgba(20, 241, 149, 0.3);
+  box-shadow: 0 0 20px rgba(0, 122, 255, 0.8), 0 0 50px rgba(88, 86, 214, 0.5), 0 0 80px rgba(0, 122, 255, 0.3);
 }
 
 @keyframes neonPulse {
 
   0%,
   100% {
-    box-shadow: 0 0 10px rgba(20, 241, 149, 0.5), 0 0 30px rgba(153, 69, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.5), 0 0 30px rgba(88, 86, 214, 0.3);
   }
 
   50% {
-    box-shadow: 0 0 20px rgba(20, 241, 149, 0.8), 0 0 50px rgba(153, 69, 255, 0.5), 0 0 70px rgba(20, 241, 149, 0.4);
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.8), 0 0 50px rgba(88, 86, 214, 0.5), 0 0 70px rgba(0, 122, 255, 0.4);
   }
 }
 
-/* Ripple Button */
 .btn-ripple {
   position: relative;
   display: inline-block;
@@ -233,7 +229,7 @@ body::before {
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
-  background: linear-gradient(135deg, #14F195, #9945FF);
+  background: linear-gradient(135deg, #007AFF, #5856D6);
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -260,14 +256,12 @@ body::before {
 
 .btn-ripple:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(153, 69, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(88, 86, 214, 0.4);
 }
 
 /* ==================== */
 /* ANIMATIONS           */
 /* ==================== */
-
-/* Fade In Up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -284,7 +278,6 @@ body::before {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Fade In Down */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -301,7 +294,6 @@ body::before {
   animation: fadeInDown 0.8s ease-out forwards;
 }
 
-/* Fade In Left */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -318,7 +310,6 @@ body::before {
   animation: fadeInLeft 0.8s ease-out forwards;
 }
 
-/* Fade In Right */
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -335,7 +326,6 @@ body::before {
   animation: fadeInRight 0.8s ease-out forwards;
 }
 
-/* Scale In */
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -352,7 +342,6 @@ body::before {
   animation: scaleIn 0.6s ease-out forwards;
 }
 
-/* Rotate In */
 @keyframes rotateIn {
   from {
     opacity: 0;
@@ -369,7 +358,6 @@ body::before {
   animation: rotateIn 0.8s ease-out forwards;
 }
 
-/* Bounce In */
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -394,7 +382,6 @@ body::before {
   animation: bounceIn 0.8s ease-out forwards;
 }
 
-/* Float Y Animation */
 @keyframes floatY {
   0% {
     transform: translateY(0);
@@ -459,8 +446,8 @@ body::before {
 
 .stat-card:hover {
   transform: translateY(-5px) scale(1.03);
-  border-color: rgba(153, 69, 255, 0.5);
-  box-shadow: 0 10px 30px rgba(153, 69, 255, 0.2);
+  border-color: rgba(88, 86, 214, 0.5);
+  box-shadow: 0 10px 30px rgba(88, 86, 214, 0.2);
 }
 
 /* Feature Icon */
@@ -471,7 +458,7 @@ body::before {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: linear-gradient(135deg, #14F195, #9945FF);
+  background: linear-gradient(135deg, #007AFF, #5856D6);
   font-size: 1.3rem;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
@@ -483,8 +470,9 @@ body::before {
 
 /* Section Title */
 .section-title {
-  background: linear-gradient(90deg, #14F195, #9945FF);
+  background: linear-gradient(90deg, #007AFF, #5856D6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -493,7 +481,7 @@ body::before {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #14F195, #9945FF);
+  background: linear-gradient(135deg, #007AFF, #5856D6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -505,63 +493,63 @@ body::before {
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background: #14F195;
+  background: #007AFF;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(20, 241, 149, 0.7);
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
   }
 
   70% {
-    box-shadow: 0 0 0 10px rgba(20, 241, 149, 0);
+    box-shadow: 0 0 0 10px rgba(0, 122, 255, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(20, 241, 149, 0);
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
   }
 }
 
 /* Button Primary */
 .btn-primary {
-  background: linear-gradient(135deg, #14F195 0%, #00c9a7 50%, #9945FF 100%);
+  background: linear-gradient(135deg, #007AFF 0%, #0051D5 50%, #5856D6 100%);
   color: white;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(153, 69, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(88, 86, 214, 0.3);
 }
 
 .btn-primary:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 25px rgba(153, 69, 255, 0.5);
+  box-shadow: 0 6px 25px rgba(88, 86, 214, 0.5);
 }
 
 /* Button Secondary */
 .btn-secondary {
-  background: rgba(20, 241, 149, 0.15);
-  border: 2px solid #14F195;
-  color: #14F195;
+  background: rgba(0, 122, 255, 0.15);
+  border: 2px solid #007AFF;
+  color: #007AFF;
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(20, 241, 149, 0.3);
+  background: rgba(0, 122, 255, 0.3);
   color: white;
   transform: scale(1.05);
 }
 
 /* Button CTA */
 .btn-cta {
-  background: linear-gradient(135deg, #14F195, #9945FF);
+  background: linear-gradient(135deg, #007AFF, #5856D6);
   color: white;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(153, 69, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(88, 86, 214, 0.4);
 }
 
 .btn-cta:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 30px rgba(153, 69, 255, 0.6);
+  box-shadow: 0 8px 30px rgba(88, 86, 214, 0.6);
 }
 
 /* Activity Card */
@@ -572,18 +560,18 @@ body::before {
 
 .activity-card:hover {
   transform: translateX(8px);
-  border-color: rgba(153, 69, 255, 0.3);
+  border-color: rgba(88, 86, 214, 0.3);
   background: rgba(255, 255, 255, 0.08);
 }
 
 /* Link Arrow */
 .link-arrow {
-  color: #14F195;
+  color: #007AFF;
   transition: all 0.3s ease;
 }
 
 .link-arrow:hover {
-  color: #9945FF;
+  color: #5856D6;
   padding-left: 5px;
 }
 
@@ -682,7 +670,7 @@ body::before {
 }
 
 .terminal-status {
-  color: #14F195;
+  color: #007AFF;
 }
 
 #tradingview_chart {
@@ -729,11 +717,11 @@ body::before {
 
   0%,
   100% {
-    box-shadow: 0 0 5px rgba(20, 241, 149, 0.5), 0 0 20px rgba(153, 69, 255, 0.3);
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5), 0 0 20px rgba(88, 86, 214, 0.3);
   }
 
   50% {
-    box-shadow: 0 0 20px rgba(20, 241, 149, 0.8), 0 0 40px rgba(153, 69, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.8), 0 0 40px rgba(88, 86, 214, 0.6);
   }
 }
 
@@ -741,37 +729,18 @@ body::before {
   animation: glowPulse 2s infinite;
 }
 
-/* Float Y */
-@keyframes floatY {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.animate-float {
-  animation: floatY 3s ease-in-out infinite;
-}
-
 /* Pulse Ring */
 @keyframes pulseRing {
   0% {
-    box-shadow: 0 0 0 0 rgba(20, 241, 149, 0.7);
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
   }
 
   70% {
-    box-shadow: 0 0 0 15px rgba(20, 241, 149, 0);
+    box-shadow: 0 0 0 15px rgba(0, 122, 255, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(20, 241, 149, 0);
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
   }
 }
 
@@ -779,32 +748,351 @@ body::before {
   animation: pulseRing 2s infinite;
 }
 
-/* Delay Classes */
-.delay-1 {
-  animation-delay: 0.1s;
+/* ==================== */
+/* FULL ANIMATION ADD-ONS */
+/* ==================== */
+
+/* Animated Orbs Variants */
+.orb-1 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.4), transparent 70%);
+  animation: floatOrb1 8s infinite ease-in-out alternate;
 }
 
-.delay-2 {
-  animation-delay: 0.2s;
+.orb-2 {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(88, 86, 214, 0.4), transparent 70%);
+  animation: floatOrb2 10s infinite ease-in-out alternate;
 }
 
-.delay-3 {
-  animation-delay: 0.3s;
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 81, 213, 0.3), transparent 70%);
+  animation: floatOrb3 7s infinite ease-in-out alternate;
 }
 
-.delay-4 {
-  animation-delay: 0.4s;
+.orb-4 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(88, 86, 214, 0.3), transparent 70%);
+  animation: floatOrb4 9s infinite ease-in-out alternate;
 }
 
-.delay-5 {
-  animation-delay: 0.5s;
+@keyframes floatOrb1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(30px, -60px);
+  }
 }
 
-.delay-6 {
-  animation-delay: 0.6s;
+@keyframes floatOrb2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-40px, 50px);
+  }
 }
 
-/* Opacity Start */
-.opacity-0-start {
+@keyframes floatOrb3 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(50px, -40px);
+  }
+}
+
+@keyframes floatOrb4 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-30px, -50px);
+  }
+}
+
+/* Gradient Mesh Background */
+.gradient-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(at 20% 30%, rgba(0, 122, 255, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 70%, rgba(88, 86, 214, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(0, 81, 213, 0.05) 0px, transparent 50%);
+  z-index: -1;
+  animation: meshMove 15s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes meshMove {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Particles Canvas */
+.particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Scroll Animation Base */
+.animate-on-scroll {
   opacity: 0;
+}
+
+/* Nav Link Glow Box Animation */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0, 122, 255, 0.2), rgba(88, 86, 214, 0.2));
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.2);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Shimmer Text Effect */
+.shimmer-text {
+  background: linear-gradient(90deg, #007AFF, #5856D6, #007AFF);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s linear infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Typing Cursor */
+.typing-cursor {
+  display: inline-block;
+  color: #007AFF;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Glowing Border on Hover */
+.glow-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #007AFF, #5856D6, #007AFF, #0051D5);
+  background-size: 400% 400%;
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: gradientShift 4s ease infinite;
+}
+
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* Tilt Card Base */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+/* Magnetic Button Base */
+.magnetic-btn {
+  transition: transform 0.15s ease-out;
+}
+
+/* Avatar Interactive */
+.avatar-interactive {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* CTA Glow Section */
+.cta-glow {
+  position: relative;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #007AFF, #5856D6, #007AFF, #0051D5);
+  background-size: 400% 400%;
+  border-radius: 26px;
+  z-index: -1;
+  opacity: 0.5;
+  animation: gradientShift 4s ease infinite;
+  filter: blur(10px);
+}
+
+/* Modal Overlay & Content Transitions */
+.modal-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  transform: scale(0.95) translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0e11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #007AFF, #5856D6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgb(169, 181, 200), #7B79E0);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Activity Card Enhanced Hover */
+.activity-card:hover {
+  transform: translateX(12px) scale(1.01);
+  border-color: rgba(88, 86, 214, 0.4);
+  box-shadow: 0 8px 30px rgba(88, 86, 214, 0.15);
+}
+
+/* Stat Card Counter Styling */
+.counter {
+  display: inline-block;
+  min-width: 2ch;
+}
+
+/* Terminal Close Button Hover */
+.terminal-close {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.terminal-close:hover {
+  color: #ff5f57;
+  transform: rotate(90deg);
+}
+
+/* Feature Card Link Arrow Enhanced */
+.link-arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #5856D6;
+  transition: width 0.3s ease;
+}
+
+.link-arrow:hover::after {
+  width: 100%;
+}
+
+/* Section Entrance Stagger Helper */
+[data-delay="1"] {
+  animation-delay: 0.15s;
+}
+
+[data-delay="2"] {
+  animation-delay: 0.30s;
+}
+
+[data-delay="3"] {
+  animation-delay: 0.45s;
+}
+
+[data-delay="4"] {
+  animation-delay: 0.60s;
+}
+
+[data-delay="5"] {
+  animation-delay: 0.75s;
 }
