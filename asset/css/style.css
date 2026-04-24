@@ -431,9 +431,9 @@ body::before {
 
 /* Navigation Glass */
 .nav-glass {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(53, 148, 32, 0.6);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(213, 72, 72, 0.367);
 }
 
 /* Statistics Card */
@@ -446,8 +446,8 @@ body::before {
 
 .stat-card:hover {
   transform: translateY(-5px) scale(1.03);
-  border-color: rgba(88, 86, 214, 0.5);
-  box-shadow: 0 10px 30px rgba(88, 86, 214, 0.2);
+  border-color: rgba(22, 18, 255, 0.777);
+  box-shadow: 0 10px 30px rgba(45, 149, 102, 0.2);
 }
 
 /* Feature Icon */
@@ -470,7 +470,7 @@ body::before {
 
 /* Section Title */
 .section-title {
-  background: linear-gradient(90deg, #007bff64, #5856d67e);
+  background: linear-gradient(90deg, #00f2ff96, #5856d67e);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
