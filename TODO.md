@@ -1,13 +1,13 @@
-# TODO: Pisahkan CSS ke File Asset
+# TODO: Ubah Tema Solana menjadi iOS Apple
 
 ## Plan
-1. Buat file `asset/style.css` yang berisi semua CSS dari tag `<style>` di `index.html`
-2. Hapus tag `<style>` dari `index.html`
-3. Tambahkan tag `<link rel="stylesheet" href="asset/style.css">` di `<head>`
-4. Pastikan semua fungsional tetap berjalan (animasi background, glass effect, hover card, gradient text, floating orb, grid overlay)
+- Ganti seluruh palet warna accent dari Solana (hijau `#14F195` & ungu `#9945FF`) ke iOS Apple (biru `#007AFF` & indigo `#5856D6`).
+- Background gelap tetap dipertahankan dengan sentuhan Apple Dark Mode (`#1C1C1E`).
+- Update semua gradient, glow, border, tombol, orb, particle, scrollbar, dan status indicator.
 
 ## Langkah Pengerjaan
-- [x] Membuat TODO.md
-- [x] Membuat asset/style.css
-- [x] Mengupdate index.html menghapus <style> dan menambahkan <link>
-- [x] Verifikasi halaman tetap berfungsi dengan baik
+- [x] Update `asset/css/style.css` — replace semua hex & rgba Solana ke iOS Apple
+- [x] Update `home.html` — replace particle colors, TradingView toolbar, & Tailwind green utilities
+- [x] Verifikasi tidak ada sisa warna Solana di seluruh file
+- [x] Tema iOS Apple berhasil diterapkan di `index.html` dan `home.html`
+
