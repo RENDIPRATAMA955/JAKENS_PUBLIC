@@ -1094,3 +1094,49 @@ html {
 [data-delay="5"] {
   animation-delay: 0.75s;
 }
+
+/* ==================== */
+/* ACTIVE NAV LINK      */
+/* ==================== */
+.nav-link.active {
+  color: #fff;
+  background: linear-gradient(135deg, rgba(0, 122, 255, 0.25), rgba(88, 86, 214, 0.25));
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.25);
+}
+
+.nav-link.active::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==================== */
+/* TERMINAL NAVBAR      */
+/* ==================== */
+.terminal-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: #0d1117;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminal-nav-link {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.terminal-nav-link:hover {
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.terminal-nav-link.active {
+  color: #007AFF;
+  background: rgba(0, 122, 255, 0.1);
+}
