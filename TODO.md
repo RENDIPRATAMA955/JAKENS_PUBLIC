@@ -1,5 +1,10 @@
-# TODO: Ganti Online + Profil dengan VIP Mentoring
+# TODO - Upgrade VIP Mentoring Section
 
-- [x] Hapus badge "Online" dan avatar profil dari navbar (home, dashboard, community, events)
-- [x] Buat file `vip_mentoring.html`
-- [x] Tambahkan link "VIP Mentoring" di navbar semua halaman
+- [x] Analyze current vip_mentoring.html and style.css
+- [x] Create comprehensive edit plan
+- [x] Get user approval
+- [x] Update vip_mentoring.html — Replace VIP section with new 3-card design
+- [x] Update asset/css/style.css — Add VIP card & button styles
+- [x] Verify responsiveness and animation consistency
+
+

@@ -1140,3 +1140,68 @@ html {
   color: #007AFF;
   background: rgba(0, 122, 255, 0.1);
 }
+
+/* ==================== */
+/* VIP MENTORING CARDS  */
+/* ==================== */
+.vip-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(0);
+}
+
+.vip-card:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 20px 60px rgba(88, 86, 214, 0.25), 0 0 40px rgba(0, 122, 255, 0.15);
+  border-color: rgba(88, 86, 214, 0.4);
+}
+
+.vip-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.vip-image {
+  transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vip-card:hover .vip-image {
+  transform: scale(1.1);
+}
+
+.vip-btn-join {
+  background: linear-gradient(135deg, #7B00FF 0%, #5856D6 50%, #007AFF 100%);
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 0, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.vip-btn-join:hover {
+  background-position: 100% 0;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(123, 0, 255, 0.6), 0 0 50px rgba(0, 122, 255, 0.4);
+}
+
+.best-value-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #FF5E00, #FF00A0);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(255, 0, 160, 0.4);
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
