@@ -15,6 +15,12 @@
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading...</div>
+  </div>
+
   <!-- GRADIENT MESH OVERLAY -->
   <div class="gradient-mesh"></div>
 
@@ -290,6 +296,25 @@
       });
     })();
   </script>
+
+<script>
+  (function() {
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+      const url = link.getAttribute('href');
+      if (!url || url.startsWith('#') || url.startsWith('http') || url.startsWith('//') || url.startsWith('mailto:') || url.startsWith('tel:')) return;
+      if (url.endsWith('.html') || (!url.includes('.') && !url.startsWith('javascript'))) {
+        e.preventDefault();
+        const loader = document.getElementById('page-loader');
+        if (loader) loader.classList.add('active');
+        setTimeout(function() {
+          window.location.href = url;
+        }, 400);
+      }
+    });
+  })();
+</script>
 
 </body>
 

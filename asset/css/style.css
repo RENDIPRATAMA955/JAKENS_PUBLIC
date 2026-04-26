@@ -1142,6 +1142,52 @@ html {
 }
 
 /* ==================== */
+/* PAGE LOADER (iOS Style) */
+/* ==================== */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#page-loader.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #9CA3AF;
+  animation: iosSpin 0.9s linear infinite;
+}
+
+@keyframes iosSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-text {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+  letter-spacing: 0.05em;
+}
+
+/* ==================== */
 /* VIP MENTORING CARDS  */
 /* ==================== */
 .vip-card {

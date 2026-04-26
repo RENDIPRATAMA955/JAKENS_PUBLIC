@@ -15,6 +15,12 @@
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading...</div>
+  </div>
+
   <!-- GRADIENT MESH OVERLAY -->
   <div class="gradient-mesh"></div>
 
@@ -81,7 +87,8 @@
         <!-- Event 1 -->
         <div class="glass card glow-border p-8 rounded-2xl animate-on-scroll" data-animate="fadeInUp" data-delay="1">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-xl">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-xl">
               📅
             </div>
             <div>
@@ -101,7 +108,8 @@
         <!-- Event 2 -->
         <div class="glass card glow-border p-8 rounded-2xl animate-on-scroll" data-animate="fadeInUp" data-delay="2">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-xl">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-xl">
               🎓
             </div>
             <div>
@@ -121,7 +129,8 @@
         <!-- Event 3 -->
         <div class="glass card glow-border p-8 rounded-2xl animate-on-scroll" data-animate="fadeInUp" data-delay="3">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-xl">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-xl">
               🏆
             </div>
             <div>
@@ -141,7 +150,8 @@
         <!-- Event 4 -->
         <div class="glass card glow-border p-8 rounded-2xl animate-on-scroll" data-animate="fadeInUp" data-delay="1">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-xl">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-xl">
               💬
             </div>
             <div>
@@ -331,7 +341,25 @@
     })();
   </script>
 
+  <script>
+    (function () {
+      document.addEventListener('click', function (e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+        const url = link.getAttribute('href');
+        if (!url || url.startsWith('#') || url.startsWith('http') || url.startsWith('//') || url.startsWith('mailto:') || url.startsWith('tel:')) return;
+        if (url.endsWith('.html') || (!url.includes('.') && !url.startsWith('javascript'))) {
+          e.preventDefault();
+          const loader = document.getElementById('page-loader');
+          if (loader) loader.classList.add('active');
+          setTimeout(function () {
+            window.location.href = url;
+          }, 400);
+        }
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
-
