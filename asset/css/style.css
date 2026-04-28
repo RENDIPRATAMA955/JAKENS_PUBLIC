@@ -654,6 +654,65 @@ body::before {
 .terminal-body {
   flex: 1;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.terminal-chart-area {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.terminal-calendar-area {
+  width: 360px;
+  min-width: 280px;
+  max-width: 480px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0b0e11;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-calendar-header {
+  padding: 10px 14px;
+  background: #151a21;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terminal-calendar-toggle {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.terminal-calendar-toggle:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.terminal-calendar-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#economic_calendar {
+  width: 100%;
+  height: 100%;
 }
 
 .terminal-footer {
@@ -674,6 +733,64 @@ body::before {
 #tradingview_chart {
   width: 100%;
   height: 100%;
+}
+
+/* Terminal Resize Handle */
+.terminal-resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  cursor: nwse-resize;
+  z-index: 10;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.2) 50%);
+  border-bottom-right-radius: 14px;
+}
+
+.terminal-resize-handle:hover {
+  background: linear-gradient(135deg, transparent 50%, rgba(0, 122, 255, 0.5) 50%);
+}
+
+/* Terminal dragging state */
+.terminal-container {
+  position: relative;
+}
+
+.terminal-header {
+  user-select: none;
+}
+
+/* Calendar collapsed state */
+.terminal-calendar-area.collapsed {
+  width: 0;
+  min-width: 0;
+  border-left: none;
+  overflow: hidden;
+}
+
+.terminal-calendar-area.collapsed .terminal-calendar-content,
+.terminal-calendar-area.collapsed .terminal-calendar-header {
+  opacity: 0;
+}
+
+/* Responsive: stack calendar below chart on small screens */
+@media (max-width: 900px) {
+  .terminal-body {
+    flex-direction: column;
+  }
+  .terminal-calendar-area {
+    width: 100%;
+    max-width: none;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    height: 300px;
+    min-height: 200px;
+  }
+  .terminal-container {
+    width: 95vw !important;
+    height: 90vh !important;
+  }
 }
 
 /* Flip In X */
