@@ -40,8 +40,27 @@
         <a href="events.html" class="nav-link hover:text-white transition hover:scale-105">Events</a>
         <a href="vip_mentoring.html" class="nav-link hover:text-white transition hover:scale-105">VIP Mentoring</a>
       </div>
+      <button class="hamburger-btn" id="drawerToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel" id="drawerPanel">
+    <div class="drawer-brand gradient-text">MEX ACADEMY</div>
+    <a href="home.html" class="drawer-nav-link active"><span class="drawer-icon">&#127968;</span> Home</a>
+    <a href="dashboard.html" class="drawer-nav-link"><span class="drawer-icon">&#128202;</span> Dashboard</a>
+    <button onclick="openTerminalModal()" class="drawer-nav-link bg-transparent border-none cursor-pointer w-full text-left"><span class="drawer-icon">&#128187;</span> Terminal</button>
+    <a href="community.html" class="drawer-nav-link"><span class="drawer-icon">&#128101;</span> Community</a>
+    <a href="events.html" class="drawer-nav-link"><span class="drawer-icon">&#128197;</span> Events</a>
+    <a href="vip_mentoring.html" class="drawer-nav-link"><span class="drawer-icon">&#11088;</span> VIP Mentoring</a>
+    <div class="drawer-divider"></div>
+    <div class="drawer-footer">&copy; MEX ACADEMY</div>
+  </div>
 
   <!-- TERMINAL MODAL -->
   <div id="terminalModal" class="modal-overlay">

@@ -1305,6 +1305,183 @@ html {
 }
 
 /* ==================== */
+/* MOBILE DRAWER MENU   */
+/* ==================== */
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 5px;
+  z-index: 60;
+  position: relative;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: #00F2FF;
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: #00F2FF;
+}
+
+/* Drawer Overlay */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 45;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Drawer Panel */
+.drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 85vw;
+  height: 100vh;
+  background: rgba(10, 10, 20, 0.92);
+  backdrop-filter: blur(30px);
+  border-left: 1px solid rgba(0, 242, 255, 0.15);
+  z-index: 50;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 24px 32px;
+  overflow-y: auto;
+}
+
+.drawer-panel.active {
+  transform: translateX(0);
+}
+
+/* Drawer Branding */
+.drawer-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Drawer Nav Links */
+.drawer-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.drawer-nav-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 122, 255, 0.15), rgba(88, 86, 214, 0.15));
+  border-radius: 12px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.drawer-nav-link:hover::before,
+.drawer-nav-link.active::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.drawer-nav-link:hover {
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 122, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.drawer-nav-link.active {
+  color: #fff;
+  background: linear-gradient(135deg, rgba(0, 122, 255, 0.2), rgba(88, 86, 214, 0.2));
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.2);
+}
+
+.drawer-nav-link .drawer-icon {
+  font-size: 1.1rem;
+  width: 28px;
+  text-align: center;
+}
+
+/* Drawer Divider */
+.drawer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  margin: 16px 0;
+}
+
+/* Drawer Footer */
+.drawer-footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #475569;
+  padding-top: 24px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .hamburger-btn {
+    display: flex;
+  }
+}
+
+/* Prevent body scroll when drawer is open */
+body.drawer-open {
+  overflow: hidden;
+}
+
+/* ==================== */
 /* VIP MENTORING CARDS  */
 /* ==================== */
 .vip-card {
